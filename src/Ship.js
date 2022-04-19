@@ -9,6 +9,11 @@ class Ship {
     setSail() {
         this.startingPort = null;
     }
+
+    dock(Port) {
+        this.currentPort = Port;
+    }
+
 };
 
 module.exports = Ship;
