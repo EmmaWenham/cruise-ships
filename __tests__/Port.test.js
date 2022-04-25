@@ -8,6 +8,8 @@ describe('port constructor', () => {
 
         beforeEach(() => {
             dover = new Port('Dover');
+            port = jest.fn();
+            ship = jest.fn();
         });
 
         it('can be intantiated', () => {
