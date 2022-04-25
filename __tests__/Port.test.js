@@ -5,5 +5,25 @@ describe('port constructor', () => {
         expect(new Port()).toBeInstanceOf(Object);
     });
 
+    it('can add a ship', () => {
+        const port = new Port('Dover');
+        const ship = {};
+
+        port.addShip(ship);
+
+        expect(port.ships).toContain(ship);
+    });
+
+    it('can remove a ship', () => {
+        const port = new Port('Dover');
+        const titanic = {};
+        const bloodyMary = {};
+
+        port.addShip(titanic);
+        port.addShip(bloodyMary);
+        port.removeShip(bloodyMary);
+
+        expect(port.ships).toEqual([titanic]);
+    })
 
 });
