@@ -18,7 +18,7 @@ describe('port constructor', () => {
 
         it('can add a ship', () => {
 
-            const ship = {};
+            const ship = jest.fn();
 
             dover.addShip(ship);
 
